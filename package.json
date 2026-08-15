@@ -1,0 +1,64 @@
+{
+  "name": "@laobos/dsh-terminal",
+  "version": "0.1.0",
+  "description": "为劳博士 DSH 桌面客户端提供多标签本地终端与 tmux 会话。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check:syntax": "node --check lib/index.js && node --check lib/client.js"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "laoboshi",
+    "terminal"
+  ],
+  "author": "Modole (laoboshi)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Modole/dsh-plugin-terminal-laoboshi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Modole/dsh-plugin-terminal-laoboshi/issues"
+  },
+  "homepage": "https://github.com/Modole/dsh-plugin-terminal-laoboshi#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-settings": "^0.1.0-rc.6",
+    "react": "^18.2.0 || ^19.0.0"
+  }
+}
