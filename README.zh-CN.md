@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-dsh plugin --profile web add github:Modole/dsh-plugin-terminal-laoboshi
+dsh plugin --profile web add https://github.com/Modole/dsh-plugin-terminal-laoboshi.git
 ```
 
 安装后重启 `dsh web`。DSH 会读取 `dsh.bundle` manifest，并自动把本插件加入当前 profile。

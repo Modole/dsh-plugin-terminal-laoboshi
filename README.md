@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-dsh plugin --profile web add github:Modole/dsh-plugin-terminal-laoboshi
+dsh plugin --profile web add https://github.com/Modole/dsh-plugin-terminal-laoboshi.git
 ```
 
 Restart `dsh web` after installation. DSH reads the `dsh.bundle` manifest and adds this package to the selected profile.
